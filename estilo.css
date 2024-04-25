@@ -1,5 +1,6 @@
 :root{
     --corprincipal: #222831;
+    --corsecundaria: #FFFFFF;
 }
 
 * {
@@ -137,3 +138,36 @@
       top: -7px;
     }
   }
+
+
+
+  /*Main*/
+
+  main.principal{
+    background-color: var(--corprincipal);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+  div.blocos{
+    background-color: var(--corsecundaria);
+    height: 100vh;
+    width: 80vw;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+    grid-template-rows: repeat(5, 1fr); /* Cinco linhas */
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+div.salas{
+    width: 150px;
+    height: 150px;
+    background-color: #ccc;
+    border-radius: 5px;
+}
