@@ -143,6 +143,10 @@
 
   /*Main*/
 
+ body{
+    overflow-x: hidden;
+    }
+
   main.principal{
     background-color: var(--corprincipal);
     width: 100vw;

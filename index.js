@@ -12,3 +12,10 @@ let sala1 = {
     qntCadeiras: 50,
     tipoQuadro: "branco",
 };
+
+let sala2 = {
+    numero: 210,
+    uso: true,
+    qntCadeiras: 50,
+    tipoQuadro: "branco",
+};
