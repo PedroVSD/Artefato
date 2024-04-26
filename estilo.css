@@ -169,9 +169,20 @@
     justify-items: center;
 }
 
-div.salas{
-    width: 150px;
-    height: 150px;
-    background-color: #ccc;
-    border-radius: 5px;
+button {
+  width: 300px;
+  height: 100px;
+  background-color: #1f1c1c;
+  border-radius: 15px;
+  border:blue;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #555;
 }
