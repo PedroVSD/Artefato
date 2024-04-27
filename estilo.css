@@ -169,7 +169,7 @@
     justify-items: center;
 }
 
-button {
+button.true {
   width: 300px;
   height: 100px;
   background-color: #1f1c1c;
@@ -183,6 +183,26 @@ button {
   transition: background-color 0.3s ease;
 }
 
-button:hover {
+button.true:hover {
   background-color: #555;
+}
+
+button.Andar {
+    background-color:transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    cursor: pointer;
+  }
+
+button.Andar:hover {
+    background-color: #339dce;
+  }
+
+span.Andar{
+  font-size: 20px;
+  text-size-adjust:initial;
+  font-weight: bold;
+  border: none;
 }
