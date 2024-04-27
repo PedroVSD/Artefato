@@ -183,6 +183,11 @@ button.true {
   text-transform: uppercase;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  
+  @media (max-width: 750px) {
+    font-size: 20px;
+    max-width: 200px;
+  }
 }
 
 button.true:hover {
