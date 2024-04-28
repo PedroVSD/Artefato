@@ -169,9 +169,52 @@
     justify-items: center;
 }
 
-div.salas{
-    width: 150px;
-    height: 150px;
-    background-color: #ccc;
-    border-radius: 5px;
+button.true {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  padding: 16px;
+  background-color: #1f1c1c;
+  border-radius: 15px;
+  border: blue;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+  @media (max-width: 750px) {
+    font-size: 20px;
+    max-width: 200px;
+  }
+}
+
+button.true:hover {
+  background-color: #555;
+}
+
+button.Andar {
+    background-color:transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    cursor: pointer;
+  }
+
+button.Andar:hover {
+    background-color: #339dce;
+  }
+
+span.Andar{
+  font-size: 20px;
+  text-size-adjust:initial;
+  font-weight: bold;
+  border: none;
+}
+
+div.Andar{
+  border: 1px transparent #000;
+  height: 20px;
 }
