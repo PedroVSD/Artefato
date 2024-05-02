@@ -16,6 +16,7 @@
   .header {
     background: var(--corprincipal);
     padding-inline: 16px;
+    z-index: 10;
   }
   
   .nav {
@@ -26,12 +27,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 25;
   }
   
   .logo {
     font-size: 48px;
+    
   }
-  
+  img#busca{
+   display: none;
+  }
+
   .nav-list {
     display: flex;
     gap: 32px;
@@ -68,6 +74,7 @@
     margin-top: 5px;
     position: relative;
     transition: 0.3s;
+
   }
   
   @media (max-width: 750px) {
@@ -75,7 +82,7 @@
       display: block;
       z-index: 1;
     }
-  
+
     .nav-list {
       position: fixed;
       top: 0;
@@ -85,57 +92,62 @@
       background: var(--corprincipal);
       clip-path: circle(100px at 90% -15%);
       transition: 1s ease-out;
-  
+
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
       gap: 0;
-  
       pointer-events: none;
     }
-  
+
     .nav-list a {
       font-size: 24px;
       opacity: 0;
     }
-  
+
     .nav-list li:nth-child(1) a {
       transition: 0.5s 0.2s;
     }
-  
+
     .nav-list li:nth-child(2) a {
       transition: 0.5s 0.4s;
     }
-  
+
     .nav-list li:nth-child(3) a {
       transition: 0.5s 0.6s;
     }
-  
+
     /* Estilos ativos */
-  
+
     .nav.active .nav-list {
       clip-path: circle(1500px at 90% -15%);
       pointer-events: all;
+      z-index: 20;
     }
-  
+
     .nav.active .nav-list a {
       opacity: 1;
     }
-  
+
     .nav.active .hamburger {
       position: fixed;
       top: 26px;
       right: 16px;
-      border-top-color: transparent;
+      border-top-color: transparent; 
+      z-index: 20;
     }
-  
+
     .nav.active .hamburger::before {
       transform: rotate(135deg);
     }
-  
+
     .nav.active .hamburger::after {
       transform: rotate(-135deg);
       top: -7px;
+    }
+
+    span#andar {
+      display: none;
     }
   }
 
@@ -183,11 +195,6 @@ button.true {
   text-transform: uppercase;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  
-  @media (max-width: 750px) {
-    font-size: 20px;
-    max-width: 200px;
-  }
 }
 
 button.true:hover {
@@ -218,3 +225,75 @@ div.Andar{
   border: 1px transparent #000;
   height: 20px;
 }
+
+body#celular{
+  background: var(--corprincipal);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Definindo a altura para ocupar toda a tela */
+  flex-wrap: wrap; /* Permitir que os itens sejam quebrados em várias linhas */
+}
+
+.bloco-home > a{
+  color: var(--corprincipal);
+}
+
+.bloco-home {
+  flex: 1; /* Fazendo com que as divs ocupem todo o espaço disponível horizontalmente */
+  text-align: center; /* Centralizando o texto */
+  margin: 10px;
+  padding: 20px;
+  border-radius: 20px;
+  background: var(--corsecundaria);
+  width: calc(50% - 40px); /* Definindo a largura de forma que duas divs caibam em uma linha */
+  max-width: 262px; /* Largura máxima */
+  height: 166px;
+  align-content: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+@media (max-width: 750px){
+
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Definindo a altura para ocupar toda a tela */
+    flex-direction: column;
+  }
+
+  .bloco-home {
+    flex: 1; /* Fazendo com que as divs ocupem todo o espaço disponível horizontalmente */
+    text-align: center; /* Centralizando o texto */
+  }
+
+  /* Estilo extra para a aparência dos blocos */
+  .bloco-home {
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    background: var(--corsecundaria);
+    width: 262px;
+    height: 166px;
+    align-content: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .bloco-home:hover{
+    transform: scale(1.05);
+    
+  }
+  .bloco-home > a::after{
+    color: var(--corprincipal);
+    transition: color 0.3s ease-in-out;
+  }
+}
+
+
+

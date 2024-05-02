@@ -7,12 +7,16 @@ const index = document.querySelector("#Andar");
 const Primeiro = document.getElementById("1A");
 const Segundo = document.getElementById("2A");
 const Terceiro = document.getElementById("3A");
+const div = document.querySelectorAll("div");
+const contatos = document.querySelector("#email");
 
-
+contatos.addEventListener("click", () => {
+    alert("feito 99% por Davi e 1% por Pedro Vitor");
+});
 
 
 subir.addEventListener("click", () => {
-    if(index.textContent === "Andar: 1")
+    if(index.textContent == "Andar: 1")
     {
         index.textContent = "Andar: 2";
         Primeiro.style.zIndex = 0;
@@ -32,7 +36,7 @@ subir.addEventListener("click", () => {
 });
 
 descer.addEventListener("click", () => {
-    if(index.textContent === "Andar: 3")
+    if(index.textContent == "Andar: 3")
     {
         index.textContent = "Andar: 2";
         Segundo.style.zIndex = 10;
@@ -53,9 +57,10 @@ descer.addEventListener("click", () => {
 
 buttons.forEach(button => {
     button.addEventListener("click", () => {
-        alert(button.id);
+        alert("Faz nada ainda");
     });
 });
+
 
 hamburger.addEventListener("click", () => nav.classList.toggle("active"));
 
