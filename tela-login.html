@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="estilo-login.css">
+</head>
+<body>
+    <div id="imagem">
+        <footer id="pe">
+            <ul id="lista">
+                <li><a href="#">Ajuda</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Termos</a></li>
+                <li><a href="#">Privacidade</a></li>
+            </ul>
+        </footer>
+    </div>
+    <main>
+        <div id="login">
+            <img src="imgs/university.svg" alt="logo">
+            <H1>Bem vindo de Volta</H1>
+            <form method="post" action="envio-dados.php">
+                    <label for="email" class="dados">E-mail:</label>
+                    <input type="email" class="entrada-dados" name="email" placeholder="email@exemplo.com" required minlength="8" maxlength="30">
+                    <label for="senha" class="dados" style="margin-top: 30px;">Senha:</label>
+                    <input type="password" class="entrada-dados" name="senha" placeholder="Sua senha" required minlength="8" required>             
+                <div id="dados-senha">
+                    <p><input type="checkbox" id="lembrar" name="lembrar"><label for="lembrar"> Se Lembrar?</label></p>
+                    <a href="#">Esqueci a Senha</a>
+                </div>
+                <input type="submit" id="btn" name="" value="Entrar">                                
+                <a href="tela-conta.html">Criar Conta</a>
+            </form>
+        </div>
+            <footer id="lista">
+                <ul id="lista-b">
+                    <li><a href="#">Ajuda</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Termos</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                </ul>
+            </footer>
+    </main>  
+</body>
+</html>

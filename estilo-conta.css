@@ -1,0 +1,449 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    overflow: auto;
+}
+:root{
+    --cor01: #99582A;
+    --cor02: #432818;
+    --cor03: #FFE6A7;
+    --cor04: #6F1D1B;
+    --corprincipal: #222831;
+    --corsecundaria: #FFFFFF;
+    --corterciaria: #31363F;
+}
+
+body{
+    background-color: var(--cor03);
+    display: flex;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/*Animação*/
+
+@keyframes slide {
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/*imagem*/
+
+div#imagem{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0%;
+    height: 100vh;
+    width: 50vw;
+    background-image: url(imgs/pexels-olenkabohovyk-3646105.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div#imagem > footer#pe > ul#lista{
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+div#imagem > footer#pe > ul#lista > a{
+    position: relative;
+}
+
+/*div#imagem >  footer#pe > ul#lista > a::before{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    bottom: 0px;
+    left: 0px;
+    transition: 0.5s ease-in-out;
+    visibility: hidden;
+    transform: scaleX(0);
+}
+
+div#imagem > footer#pe > ul#lista > a:hover::before{
+    visibility: visible;
+    transform: scaleX(1);
+}*/
+
+ul > li{
+    list-style: none;
+}
+
+div#imagem > footer#pe > ul#lista > li > a{
+    text-decoration: none;
+    color: white;
+}
+
+div#imagem > footer#pe > ul#lista > li > a:hover{
+    text-decoration: underline;
+}
+
+/*Login*/
+main{
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--corterciaria);
+}
+main > footer#lista{
+    display: none;
+}
+
+main > div#login{
+    width: 500px;
+    height: 500px;
+    background-color: var(--corprincipal);
+    border: 0.5px solid var(--corsecundaria);
+    border-radius: 20px;
+    opacity: 0;
+    animation: slide 0.5s forwards;
+    transform: translateX(200px);
+    animation-timing-function: ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div#login > h1{
+    font-weight: 300;
+    font-size: 24px;
+    color: var(--corsecundaria);
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+div#login > form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+
+div#login > form > label.dados{
+    color: var(--corsecundaria);
+    font-size: 20px;
+    margin-right: 270px;
+    position: relative;
+    bottom: 2px;
+    left: -50px;
+}
+
+div#login > form > input.entrada-dados{
+    width: 442px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--corsecundaria);
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    animation: slide 0.3s forwards;
+    position: relative;
+}
+
+div#login > form > input.entrada-dados:focus{
+    outline: none;
+    color: var(--corsecundaria);
+}
+/*fom*/
+div#senha-nome{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    height: 155px;
+    font-size: 20px;
+    color: var(--corsecundaria);
+}
+
+div#senha-nome > p#senha-p > label.dados{
+    position: relative;
+    left: 39px;
+}
+
+div#senha-nome > p#senha-p > input.senha{
+    position: relative;
+    width: 200px;
+    left: 30px;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--corsecundaria);
+    color: var(--corsecundaria);
+}
+
+div#senha-nome > p#senha-p > input.senha:focus{
+    color: var(--corsecundaria);
+}
+
+div#senha-nome > p#senha-p-c > input.senha{
+    width: 200px;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--corsecundaria);
+    color: var(--corsecundaria);
+}
+
+div#senha-nome > p#nome-p > label.dados{
+    position: relative;
+    left: 39px;
+}
+
+div#senha-nome > p#nome-p > input.nome{
+    position: relative;
+    width: 200px;
+    left: 30px;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--corsecundaria);
+    color: var(--corsecundaria);
+}
+
+div#senha-nome > p#nome-p > input.nome:focus{
+    color: var(--corsecundaria);
+}
+
+div#senha-nome > p#nome-p-c > input.nome{
+    position: relative;
+    width: 200px;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--corsecundaria); 
+    color: var(--corsecundaria);
+}
+/*fim form*/
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px var(--corsecundaria) inset !important;
+  -webkit-text-fill-color: var(--corterciaria) !important;
+}
+
+/*div#login > form > input.entrada-dados::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--cor01);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}*/
+
+div#login > form > input.entrada-dados:hover::before{
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+div#login > form > input#btn{
+    color: var(--corsecundaria);
+    background-color: var(--corprincipal);
+    border: var(--corterciaria) solid 1px;
+    border: solid 1px var(--corterciaria);
+    width: 124px;
+    height: 36px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: light;
+    margin-top: 30px;
+    position: relative;
+    bottom: 10px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+div#login > form > input#btn:hover{
+    background-color: var(--corterciaria);
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    color: white;
+    cursor: pointer;
+}
+
+div#login label a{
+    color: var(--cor04);
+}
+
+/*Rodapé*/
+
+
+
+/*Responsividade*/
+
+@media (max-width: 1140px){
+    body{
+        background-image: url(imagens/pexels-pew-nguyen-244133.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vw;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        right: 40px;
+    }
+    div#imagem{
+        display: none;
+    }
+    div#imagem > footer#pe{
+        display: block;
+    }
+    main > div#login{
+        position: relative;
+        left: 40px;
+        border: 1px solid var(--cor01);
+    }
+    /*form*/
+    div#login > form > label.dados{
+        position: relative;
+        top: 10px;
+    }
+    div#login > form > input.entrada-dados{
+        width: 420px;
+        position: relative;
+        top: 5px;
+    }
+    div#senha-nome{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr); 
+        height: 210px;
+    } 
+    div#senha-nome > p#senha-p{
+        overflow: hidden;
+    }
+    div#senha-nome > p#senha-p > input.senha{
+        width: 100%;
+    }
+    div#senha-nome > p#senha-p-c{
+        overflow: hidden;
+    }
+    div#senha-nome > p#senha-p-c > input.senha{
+        width: 100%;
+    }
+    div#senha-nome > p#nome-p{
+        overflow: hidden;
+    }
+    div#senha-nome > p#nome-p > input.nome{
+        width: 100%;  
+    }
+    div#senha-nome > p#nome-p-c{
+        overflow: hidden;
+    }
+    div#senha-nome > p#nome-p-c > input.nome{
+        width: 100%;
+    }
+    /*fim form*/  
+    main > footer#lista{
+        display: flex;
+        position: relative;
+        left: 30px;
+        width: 400px;
+    }
+    main > footer#lista > ul{
+        display: flex;
+        width: 400px;
+        justify-content: space-evenly;
+    }
+    main > footer#lista > ul > li > a{
+        color: white;
+        text-decoration: none;
+    }
+    main > footer#lista > ul > li > a:hover{
+        text-decoration: underline;
+    }
+}
+
+@media (max-width:480px) {
+    body{
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    main > div#login{
+        width: 280px;
+        height: 280px;
+    }
+    div#login > img{
+        margin-top: 3px;
+    }
+    
+    div#login > h1{
+        font-weight: 300;
+        font-size: 16px;
+    }
+    
+    div#login > form > label.dados{
+        font-size: 10px;
+        margin-right: 210px;
+    }
+    
+    div#login > form > input.entrada-dados{
+        width: 250px;
+        height: 35px;
+        font-size: 12px;
+        margin-top: 3px;
+        font-family: 'Quicksand', sans-serif;
+    }
+    div#login > form > input.entrada-dados:focus-visible{
+        background-color: var(--cor03);
+    }
+    div#dados-senha{
+        margin-top: 5px;
+        width: 280px;
+        font-weight: light;
+        padding-left: 18px;
+        padding-right: 18px;
+        align-items: baseline;
+        padding-bottom: 3px;
+    }
+    div#login > form > div#dados-senha > a{
+        font-size: 10px;
+    }
+    
+    div#login > form > a{
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+    div#login > form > div#dados-senha > p > label{
+        font-size: 10px;
+    }
+    div#login > form > input#btn{
+        width: 100px;
+        height: 30px;
+    }
+    main > footer#lista{
+        width: 280px;
+        font-size: 12.5px;
+        display: flex;
+        left: 38px;
+    }
+}

@@ -1,6 +1,7 @@
 :root{
     --corprincipal: #222831;
     --corsecundaria: #FFFFFF;
+    --corterciaria: #31363F;
 }
 
 * {
@@ -155,6 +156,14 @@
 
   /*Main*/
 
+  div.Caixa-Andar{
+    z-index: 15;
+    border: #000 solid;
+    width: 110px;
+    height: 30px;
+    margin-bottom: 10px;
+  }
+
  body{
     overflow-x: hidden;
     }
@@ -187,8 +196,8 @@ button.true {
   max-width: 300px;
   padding: 16px;
   background-color: #1f1c1c;
-  border-radius: 15px;
-  border: blue;
+  border-radius: 50px;
+  border: blue 0px 10px 0px 10px;
   color: #ffffff;
   font-size: 25px;
   font-weight: bold;
@@ -293,6 +302,20 @@ body#celular{
     color: var(--corprincipal);
     transition: color 0.3s ease-in-out;
   }
+
+  div.blocos{
+    background-color: var(--corsecundaria);
+    height: 100vh;
+    width: 80vw;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Duas colunas */
+    grid-template-rows: repeat(5, 1fr); /* Cinco linhas */
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
 }
 
 

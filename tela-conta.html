@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar sua conta</title>
+    <link rel="stylesheet" href="estilo-conta.css">
+</head>
+<body>
+    <div id="imagem">
+        <footer id="pe">
+            <ul id="lista">
+                <li><a href="#">Ajuda</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Termos</a></li>
+                <li><a href="#">Privacidade</a></li>
+            </ul>
+        </footer>
+    </div>
+    <main>
+        <div id="login">
+            <img src="imgs/university.svg" alt="logo">
+            <H1>Vamos criar sua conta :)</H1>
+            <form method="post" action="envio-dados.php">
+                <label for="i-mail" class="dados">Email:</label>    
+                    <input class="entrada-dados" type="email" name="mail" id="i-mail" required minlength="8" maxlength="30">
+                <div id="senha-nome">
+                    <p id="senha-p" class="p">
+                        <label for="i-senha" class="dados">Senha:</label>
+                            <input class="entrada-dados senha" type="password" required min="8" max="30" name="senha" id="i-senha">
+                    </p>
+                    <p id="senha-p-c" class="p">
+                        <label for="c-i-senha" class="dados">Confirmar senha:</label>
+                            <input class="entrada-dados senha" type="password" required min="8" max="30" name="c-senha" id="c-i-senha">
+                    </p>
+                    <p id="nome-p" class="p">
+                        <label for="i-nome" class="dados">Nome:</label>
+                            <input class="entrada-dados nome" type="text" required min="3" max="15" name="nome" id="i-nome">
+                    </p>
+                    <p id="nome-p-c" class="p">
+                        <label for="s-i-nome" class="dados">Sobrenome:</label>
+                            <input class="entrada-dados nome" type="text" required min="3" max="15" name="s-nome" id="s-i-nome">
+                    </p>
+                </div>
+                <div id="links">
+                    <input type="checkbox" class="marcar">
+                        <label><a href="#">Aceita os nossos termos?</a></label>
+                    <input type="checkbox" class="marcar">   
+                        <label>Receber Atualizações?</label>  
+                </div>
+                    <input type="submit" value="Criar conta" id="btn">
+            </form>
+        </div>
+            <footer id="lista">
+                <ul id="lista-b">
+                    <li><a href="#">Ajuda</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Termos</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                </ul>
+            </footer>
+    </main>  
+</body>
+</html>
