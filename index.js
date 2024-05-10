@@ -57,7 +57,7 @@ descer.addEventListener("click", () => {
 
 buttons.forEach(button => {
     button.addEventListener("click", () => {
-        alert("Faz nada ainda");
+        //alert("Faz nada ainda");
     });
 });
 
@@ -65,5 +65,28 @@ buttons.forEach(button => {
 hamburger.addEventListener("click", () => nav.classList.toggle("active"));
 
 
+document.getElementById("A110").addEventListener("click", function() {
+    document.getElementById("infoDiv").style.display = "block";
+});
+
+document.getElementById("closeInfoButton").addEventListener("click", function() {
+    document.getElementById("infoDiv").style.display = "none";
+});
+
+document.getElementById("A110").addEventListener("click", function() {
+    document.getElementById("infoDiv").classList.toggle("show");
+});
+
+document.getElementById("closeInfoButton").addEventListener("click", function() {
+    document.getElementById("infoDiv").classList.remove("show");
+});
+
+document.getElementById("A109").addEventListener("click", function() {
+    document.querySelector(".infoDiv").classList.toggle("show");
+});
+
+document.querySelector(".closeInfoButton").addEventListener("click", function() {
+    document.querySelector(".infoDiv").classList.remove("show");
+});
 
 

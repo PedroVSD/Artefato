@@ -25,15 +25,31 @@
     <main class="principal">
         
         <div class="Caixa-Andar">
-            <button id="baixo" class="Andar"> < </button>
+            <button id="baixo" class="Andar"> <img src="imgs/chevron-down.svg" alt=""> </button>
             <span id="Andar-nome" class="Andar">Andar: 1</span>
-            <button id="cima" class="Andar">></button>
+            <button id="cima" class="Andar"><img src="imgs/chevron-up.svg" alt=""></button>
 
         </div>
 
         <div id="1A" class="blocos" style="z-index: 10; position: absolute;">
             <button id="A110" class="true">110</button>
+            <div id="infoDiv" style="display: none;">
+                <p>SISTEMAS DISTRIBUÍDOS - JULIANA MENDES NASCENTE E SILVA ZAMITH 08:00-10:00</p>
+                <p>PROGRAMAÇÃO ESTRUTURADA - DANIEL FABIO DOMINGUES POSNER 10:00-12:00</p>
+                <p>Linha 3</p>
+                <p>Linha 4</p>
+                <p>Linha 5</p>
+                <button id="closeInfoButton">Fechar</button>
+            </div>
             <button id="A109" class="true">109</button>
+                <div class="infoDiv">
+                <p>COMPILADORES - DANIEL FABIO DOMINGUES POSNER 08:00-10:00</p>
+                <p>BANCO DE DADOS - FELLIPE RIBEIRO DUARTE 10:00-12:00</p>
+                <p>Linha 3</p>
+                <p>Linha 4</p>
+                <p>Linha 5</p>
+            <button class="closeInfoButton">Fechar</button>
+            </div>
             <button id="A108" class="true">108</button>
             <button id="A107" class="true">107</button>
             <button id="A106" class="true">106</button>
@@ -41,10 +57,11 @@
             <button id="A104" class="true">104</button>
             <button id="A103" class="true">103</button>
             <button id="A102" class="true">102</button>
-            <button id="A101" class="true">101</button>
+            <button id="A101" class="true">101</button>but
         </div>
 
         <div id="2A" class="blocos" style="z-index: 0; position:absolute;">
+            <button id="dropdownButton" class="dropdownButton">Abrir Menu</button>
             <button id="A210" class="true">210</button>
             <button id="A209" class="true">209</button>
             <button id="A208" class="true">208</button>
@@ -58,6 +75,7 @@
         </div>
 
         <div id="3A" class="blocos" style="z-index: 0; position:absolute;">
+            <button id="dropdownButton" class="dropdownButton">Abrir Menu</button>
             <button id="A310" class="true">310</button>
             <button id="A309" class="true">309</button>
             <button id="A308" class="true">308</button>
